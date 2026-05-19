@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -16,10 +16,10 @@
 
 <body>
 
-    <!-- Início: Loading -->
+    <!-- Início: Loading 
     <div id="inicio">
-        <img id="img-logo" src="./src/assets/logo-killswitch.png" alt="Logo da UNO">
-        <img id="img-loading" src="./src/assets/pac-man.png" alt="Vinil">
+        <img id="img-logo" src="./src/assets/logo-killswitch.png" alt="Logo da Killswitch">
+        <img id="img-loading" src="./src/assets/pac-man.png" alt="Fantasma do pac-man">
 
         <div id="texto-loading">
             <h1 id="titulo-loading">Bem-vindo à K<span>illswitch</span></h1>
@@ -39,7 +39,149 @@
             <p id="tags">Jogos</p>
         </div>
     </div>
-    <!-- Fim: Loading -->
+     Fim: Loading -->
+
+    <!--Início: Menu-->
+    <header>
+        <a href="index.html"><img id="img-menu" src="./src/assets/logo-killswitch.png"
+                alt="Logo Killswitch"></a>
+
+        <nav id="link-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./src/pages/sobre.html">Sobre</a></li>
+                <li><a href="./src/pages/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <a id="botao-menu" href="./src/pages/portfolio.html">Portfólio</a>
+
+        <button id="hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <!-- Fim: Menu -->
+
+    <main>
+
+        <!--Início: Hero-->
+        <section id="hero">
+            <div id="hero-container">
+                <div id="hero-esquerdo">
+
+                    <div id="hero-badge">
+                        Periféricos  ·  Hardware  ·  Acessórios  ·  Jogos 
+                    </div>
+
+                    <div id="hero-title-sub">
+                        <div id="hero-title">
+                            <h2>O jogo não espera.<br><span>Você está pronto?</span></h2>
+                        </div>
+
+                        <div id="hero-sub">
+                            <p>Missões, batalhas e conquistas começam com o setup certo.<br> Nós armamos você para cada partida.</p>
+                        </div>
+                    </div>
+
+                    <div id="hero-btns">
+                        <a id="btn-produto" href="./src/pages/portfolio.html">Ver produtos</a>
+                        <a id="btn-historia" href="./src/pages/sobre.html">Nossa história</a>
+                    </div>
+                </div>
+
+                <div id="hero-direito">
+                    <img id="controle" src="./src/assets/controle.png" alt="Controle">
+                </div>
+            </div>
+        </section>
+        <!--Fim: Hero-->
+
+
+        <!-- Início: Explore por categoria -->
+        <section id="categorias">
+            <div id="categorias-container">
+                <h2 id="categorias-titulo">Explore por <span>categoria</span></h2>
+                <div id="categorias-grid">
+                    <a href="./src/pages/portfolio.html?genero=perifericos" class="categoria-card">
+                        <span class="categoria-icon">💻</span>
+                        <p>Periféricos</p>
+                    </a>
+                    <a href="./src/pages/portfolio.html?genero=hardware" class="categoria-card">
+                        <span class="categoria-icon">⚙️</span>
+                        <p>Hardware</p>
+                    </a>
+                    <a href="./src/pages/portfolio.html?genero=acessorios" class="categoria-card">
+                        <span class="categoria-icon">🔌</span>
+                        <p>Acessórios</p>
+                    </a>
+                    <a href="./src/pages/portfolio.html?genero=jogos" class="categoria-card">
+                        <span class="categoria-icon">🎮</span>
+                        <p>Jogos</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Fim: Explore por gênero -->
+
+        <!-- Início: Destaques da semana -->
+        <section id="destaques">
+            <div id="destaques-container">
+                <div id="destaques-header">
+                    <h2 id="destaques-titulo">Destaques da semana</h2>
+                    <a href="/UNO-Loja-de-Discos/src/pages/portfolio.html" id="btn-ver-todos">Ver todos →</a>
+                </div>
+                <div id="destaques-grid">
+
+                    <div class="produto-card">
+                        <div class="produto-capa">
+                            <img src="/UNO-Loja-de-Discos/src/assets/Home/white-album.jpg" alt="White Album" width="75%"
+                                height="75%">
+                            <span class="produto-badge badge-raridade">Raridade</span>
+                        </div>
+                        <div class="produto-info">
+                            <p class="produto-nome">White Album</p>
+                            <p class="produto-artista">The Beatles · CD</p>
+                            <p class="produto-preco">R$ 199,99</p>
+                            <p class="produto-parcela">ou 12x de R$ 16,99</p>
+                        </div>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-capa">
+                            <img src="/UNO-Loja-de-Discos/src/assets/Home/even-in-arcadia.jpg" alt="Even In Arcadia"
+                                width="80%" height="80%">
+                            <span class="produto-badge badge-lancamento">Lançamento</span>
+                        </div>
+                        <div class="produto-info">
+                            <p class="produto-nome">Even In Arcadia</p>
+                            <p class="produto-artista">Sleep Token · Vinil</p>
+                            <p class="produto-preco">R$ 299,99</p>
+                            <p class="produto-parcela">ou 12x de R$ 24,99</p>
+                        </div>
+                    </div>
+
+                    <div class="produto-card">
+                        <div class="produto-capa">
+                            <img src="/UNO-Loja-de-Discos/src/assets/Home/the-black.jpg" alt="The Black" width="100%"
+                                height="100%">
+                            <span class="produto-badge badge-promo">Promoção</span>
+                        </div>
+                        <div class="produto-info">
+                            <p class="produto-nome">The Black</p>
+                            <p class="produto-artista">Imminence · Vinil</p>
+                            <p class="produto-preco-old">R$ 299,99 <span class="produto-preco">R$ 99,99</span></p>
+                            <p class="produto-parcela">ou 12x de R$ 8,99</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Fim: Destaques da semana -->
+
+    </main>
 
     <script src="./src/js/script.js"></script>
 </body>
