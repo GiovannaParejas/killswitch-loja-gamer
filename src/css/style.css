@@ -1,1 +1,116 @@
-/*Estilo*/
+:root {
+    --cor-preta: #060D1A;
+    --cor-branca: #E8F4FF;
+    --cor-azul-escuro: #0066CC;
+    --cor-azul-claro: #00B4FF;
+    --borda-tags: #00B4FF80;
+    --fundo-tags: #0066CC26;
+    --fonte-titulo: "Bebas Neue", sans-serif;
+    --fonte-corpo: "Inter", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Início: Loading */
+
+#inicio {
+    background: var(--cor-preta);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    gap: 20px;
+    overflow: hidden;
+
+}
+
+#img-logo {
+    width: 420px;
+    height: auto;
+}
+
+#img-loading {
+    width: 180px;
+    height: 180px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#titulo-loading {
+    color: var(--cor-azul-escuro);
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+}
+
+#titulo-loading span {
+    color: var(--cor-branca)
+}
+
+#barra-container {
+    width: 280px;
+    height: 3px;
+    background: var(--cor-azul-escuro);
+    border-radius: 2px;
+    margin-top: 0;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+#barra-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--cor-azul-claro);
+    border-radius: 2px;
+    transition: width 0.1s ease;
+}
+
+#porcentagem {
+    color: var(--cor-azul-claro);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-family: var(--fonte-corpo);
+    letter-spacing: 0.06em;
+}
+
+#barra-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#texto-loading {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+#tags-loading {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#tags {
+    color: var(--cor-branca);
+    background-color: var(--fundo-tags);
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--borda-tags);
+    font-family: var(--fonte-corpo);
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+/* Fim: Loading */
