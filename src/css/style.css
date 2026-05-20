@@ -123,6 +123,60 @@
     font-size: 0.75rem;
 }
 
+@media (max-width: 768px) {
+    #img-logo {
+        width: 280px;
+    }
+
+    #img-loading {
+        width: 130px;
+        height: 130px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    #titulo-loading {
+        font-size: 1.8rem;
+    }
+
+    #barra-container {
+        width: 220px;
+    }
+
+    #tags-loading {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #img-logo {
+        width: 320px;
+    }
+
+    #img-loading {
+        width: 150px;
+        height: 150px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #titulo-loading {
+        font-size: 2.2rem;
+    }
+
+    #barra-container {
+        width: 180px;
+    }
+
+    #tags {
+        font-size: 0.7rem;
+        padding: 8px 14px;
+    }
+}
+
 /* Fim: Loading */
 
 /* Início: Menu */
@@ -832,12 +886,16 @@ main {
         gap: 1.6rem;
     }
 
+    .cta-btn {
+        width: 100%;
+    }
+
     .cta-card {
         padding: 1.75rem;
     }
 
     .cta-titulo {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 }
 

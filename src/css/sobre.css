@@ -290,32 +290,120 @@
 }
 
 @media (max-width: 1024px) {
+    #sobre-hero,
+    #quem-somos,
+    #timeline,
     #valores {
         padding: 60px 40px;
     }
 }
 
 @media (max-width: 768px) {
+    #sobre-hero,
+    #quem-somos,
+    #timeline,
     #valores {
         padding: 40px 24px;
     }
 
-    #valores-grid {
-        grid-template-columns: repeat(2, 1fr);
+    #sobre-titulo {
+        font-size: 2rem;
+    }
+
+    #sobre-hero-img {
+        width: 160px;
+    }
+
+    #quem-somos-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    #stats {
+        flex-wrap: wrap;
+        gap: 1.2rem;
+    }
+
+    #timeline-titulo {
+        font-size: 2rem;
+    }
+
+    #timeline-linha::before {
+        left: 16px;
+    }
+
+    .tl-item {
+        grid-template-columns: 20px 1fr;
+        gap: 1rem;
+    }
+
+    .tl-ano {
+        display: none;
+    }
+
+    .tl-direita .tl-card,
+    .tl-esquerda .tl-card {
+        order: 2;
+    }
+
+    .tl-direita .tl-ponto,
+    .tl-esquerda .tl-ponto {
+        order: 1;
     }
 }
 
 @media (max-width: 480px) {
+    #sobre-hero,
+    #quem-somos,
+    #timeline,
     #valores {
         padding: 40px 16px;
     }
 
-    #valores-grid {
-        grid-template-columns: 1fr;
+    #sobre-titulo {
+        font-size: 1.6rem;
+    }
+
+    #sobre-hero-img {
+        width: 120px;
+    }
+
+    #stats {
+        justify-content: space-between;
+    }
+
+    .stat-num {
+        font-size: 1.4rem;
+    }
+
+    .stat-label {
+        font-size: .75rem;
+    }
+
+    #timeline-titulo {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .tl-card {
+        padding: .9rem 1rem;
+    }
+
+    .tl-card h3 {
+        font-size: .88rem;
+    }
+
+    .tl-card p {
+        font-size: .78rem;
+    }
+
+        #valores-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
     }
 
     .valor-card {
-        padding: 1.5rem;
+        padding: 1rem;
     }
 }
 /* Fim: valores */
