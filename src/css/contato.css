@@ -1,0 +1,230 @@
+/* Início: Hero Contato */
+#contato-hero {
+    background: var(--cor-preta);
+    padding: 60px 80px 40px;
+    border-bottom: 1px solid var(--cor-azul-escuro);
+}
+
+#contato-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contato-titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 3rem;
+    color: var(--cor-branca);
+    letter-spacing: .04em;
+    margin-bottom: .5rem;
+}
+
+#contato-titulo span {
+    color: var(--cor-azul-claro);
+}
+
+#contato-sub {
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+    color: var(--cor-branca-70);
+}
+/* Fim: Hero Contato */
+
+/* Início: Contato Section */
+#contato-section {
+    background: var(--cor-preta);
+    padding: 40px 80px 80px;
+}
+
+#contato-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.contato-card {
+    background: #111820;
+    border: 1px solid rgba(0,180,255,0.15);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contato-card-titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    color: var(--cor-branca);
+    letter-spacing: .06em;
+}
+
+/* Formulário */
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+
+.form-label {
+    font-family: var(--fonte-corpo);
+    font-size: .82rem;
+    color: var(--cor-branca-70);
+}
+
+.form-input {
+    background: rgba(0, 0, 0, .3);
+    border: 1px solid rgba(0,180,255,0.15);;
+    border-radius: 8px;
+    padding: .75rem 1rem;
+    color: var(--cor-branca);
+    font-family: var(--fonte-corpo);
+    font-size: .9rem;
+    outline: none;
+    width: 100%;
+    transition: border-color .2s;
+}
+
+.form-input:focus {
+    border-color: var(--cor-azul-claro);
+}
+
+.form-input::placeholder {
+    color: #444;
+}
+
+.form-textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form-erro {
+    font-size: .72rem;
+    color: var(--cor-azul-claro);
+    min-height: .9rem;
+    display: block;
+}
+
+#form-success {
+    background: #0a2a1a;
+    border: 1px solid #1a5a2a;
+    color: #52c48c;
+    padding: .75rem 1rem;
+    border-radius: 8px;
+    font-size: .88rem;
+    font-family: var(--fonte-corpo);
+    display: none;
+}
+
+#btn-enviar {
+    background: var(--cor-azul-claro);
+    border: 2px solid var(--cor-azul-claro);
+    color: var(--cor-preta);
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .9rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s ease;
+    margin-top: .5rem;
+}
+
+#btn-enviar:hover {
+    background: none;
+    border: 2px solid var(--cor-azul-claro);
+    color: var(--cor-azul-claro);
+}
+
+/* Informações */
+#contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .9rem;
+}
+
+.info-icone {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--cor-azul-escuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 6px; 
+}
+
+.info-icone img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.info-item strong {
+    display: block;
+    font-family: var(--fonte-corpo);
+    font-size: .88rem;
+    color: var(--cor-branca);
+    margin-bottom: .15rem;
+}
+
+.info-item p {
+    font-family: var(--fonte-corpo);
+    font-size: .82rem;
+    color: var(--cor-branca-70);
+    line-height: 1.5;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    #contato-hero,
+    #contato-section {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    #contato-hero,
+    #contato-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    #contato-titulo { font-size: 2.2rem; }
+
+    #contato-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    #contato-hero,
+    #contato-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #contato-titulo { font-size: 1.8rem; }
+
+    .contato-card { padding: 1.5rem; }
+}
+/* Fim: Contato Section */
