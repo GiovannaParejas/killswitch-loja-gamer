@@ -1,21 +1,21 @@
 document.querySelector('header').classList.add('visivel');
 
 const produtos = [
-    { id: 1, nome: "Guitar Hero III",            tipo: "cd",    genero: "rock",       badge: "raridade",  preco: 199.99, precoOld: null,   tamanho: "75%",  img: "../assets/Home/white-album.jpg" },
-    { id: 2, nome: "Even In Arcadia",            tipo: "vinil", genero: "rock",       badge: "lancamento",preco: 299.99, precoOld: null,   tamanho: "80%",  img: "../assets/Home/even-in-arcadia.jpg" },
-    { id: 3, nome: "The Black",                  tipo: "vinil", genero: "rock",       badge: "promocao",  preco: 99.99,  precoOld: 299.99, tamanho: "100%", img: "../assets/Home/the-black.jpg" },
-    { id: 4, nome: "Hit Me Hard and Soft",       tipo: "cd",    genero: "pop",        badge: "promocao",  preco: 99.99,  precoOld: 199.99, tamanho: "100%", img: "../assets/Portfólio/hit-me.jpg" },
-    { id: 5, nome: "Nobody Can Live Forever",    tipo: "vinil", genero: "mpb",        badge: "raridade",  preco: 89.99,  precoOld: null,   tamanho: "65%",  img: "../assets/Portfólio/tim-maia.jpg" },
-    { id: 6, nome: "Construção",                 tipo: "vinil", genero: "mpb",        badge: "raridade",  preco: 89.99,  precoOld: null,   tamanho: "65%",  img: "../assets/Portfólio/construcao.jpg" },
-    { id: 7, nome: "Happier",                    tipo: "vinil", genero: "eletronico", badge: "",          preco: 159.99, precoOld: null,   tamanho: "100%", img: "../assets/Portfólio/happier.avif" },
-    { id: 8, nome: "...And Justice For All",     tipo: "vinil", genero: "rock",       badge: "importado", preco: 399.99, precoOld: null,   tamanho: "85%",  img: "../assets/Portfólio/and-justice.jpg" },
-    { id: 9, nome: "Classic Music Masterpieces", tipo: "vinil", genero: "classico",   badge: "raridade",  preco: 229.99, precoOld: null,   tamanho: "65%",  img: "../assets/Portfólio/mozart.jpg" },
+    { id: 1, nome: "Guitar Hero III",                tipo: "Xbox 360",    genero: "jogo",       badge: "jogo",       preco: 199.99, precoOld: null,    tamanho: "75%",  img: "../assets/guitar-hero.jpg" },
+    { id: 2, nome: "Teclado Alloy Origins",          tipo: "HyperX",      genero: "periferico", badge: "periferico", preco: 299.99, precoOld: null,    tamanho: "100%", img: "../assets/alloy-origins.jpg" },
+    { id: 3, nome: "Processador Ryzen 5 4500",       tipo: "AMD",         genero: "hardware",   badge: "hardware",   preco: 669.99, precoOld: 1299.99, tamanho: "85%",  img: "../assets/ryzen-5.jpg" },
+    { id: 4, nome: "Suporte para microfone",         tipo: "Fifine",      genero: "acessorio",  badge: "acessorio",  preco: 169.99, precoOld: null,    tamanho: "70%",  img: "../assets/suporte.jpg" },
+    { id: 5, nome: "Tom Clancy's Rainbow Six Siege", tipo: "PS4",         genero: "jogo",       badge: "jogo",       preco: 89.99,  precoOld: 199.99,  tamanho: "80%",  img: "../assets/r6.jpg" },
+    { id: 6, nome: "Memória RAM 16GB DDR4",          tipo: "Kingston",    genero: "hardware",   badge: "hardware",   preco: 1199.99,precoOld: 1999.99, tamanho: "100%", img: "../assets/ram.jpg" },
+    { id: 7, nome: "Mouse Astrolabe Lite",           tipo: "Redragon",    genero: "periferico", badge: "periferico", preco: 159.99, precoOld: null,    tamanho: "80%",  img: "../assets/mouse.jpg" },
+    { id: 8, nome: "Rock Band 4",                    tipo: "Xbox One",    genero: "jogo",       badge: "jogo",       preco: 199.99, precoOld: 299.99,  tamanho: "80%",  img: "../assets/rock-band.jpg" },
+    { id: 9, nome: "Tela Verde",                     tipo: "Streamplify", genero: "acessorio",  badge: "acessorio",  preco: 1299.99,precoOld: null,    tamanho: "85%",  img: "../assets/tela-verde.jpg" },
 ];
 
 const badgeLabel = {
-    jogo:       { texto: "Jogo",   classe: "badge-jogo"   },
+    jogo:       { texto: "Jogo",       classe: "badge-jogo"       },
     periferico: { texto: "Periférico", classe: "badge-periferico" },
-    hardware:   { texto: "Hardware",   classe: "badge-hardware"      },
+    hardware:   { texto: "Hardware",   classe: "badge-hardware"   },
     acessorio:  { texto: "Acessório",  classe: "badge-acessorio"  },
 };
 
@@ -54,15 +54,15 @@ function renderGrid(lista) {
 }
 
 function filtrar() {
-    const tipo   = document.querySelector(".filtro-tipo.ativo")?.dataset.tipo || "todos";
-    const genero = document.getElementById("filtro-genero").value;
-    const badge  = document.getElementById("filtro-preco").value;
+    const tipo  = document.querySelector(".filtro-tipo.ativo")?.dataset.tipo || "todos";
+    const marca = document.getElementById("filtro-marca").value;
+    const promo = document.getElementById("filtro-preco").value;
 
     const resultado = produtos.filter(p => {
-        const okTipo   = tipo   === "todos" || p.tipo   === tipo;
-        const okGenero = genero === "todos" || p.genero === genero;
-        const okBadge  = badge  === "todos" || p.badge  === badge;
-        return okTipo && okGenero && okBadge;
+        const okTipo  = tipo  === "todos" || p.genero === tipo;
+        const okMarca = marca === "todos" || p.tipo   === marca;
+        const okPromo = promo === "todos" || (promo === "promocao" && p.precoOld !== null);
+        return okTipo && okMarca && okPromo;
     });
 
     renderGrid(resultado);
@@ -77,8 +77,8 @@ function renderTabela() {
         return `
             <tr>
                 <td>${p.nome}</td>
-                <td>${p.tipo.toUpperCase()}</td>
-                <td>${p.genero.toUpperCase()}</td>
+                <td>${p.tipo}</td>
+                <td>${badgeLabel[p.badge]?.texto || p.badge}</td>
                 <td class="td-preco-old">R$ ${p.precoOld.toFixed(2).replace(".", ",")}</td>
                 <td class="td-preco-novo">R$ ${p.preco.toFixed(2).replace(".", ",")}</td>
                 <td class="td-desconto">-${desconto}%</td>
@@ -95,21 +95,8 @@ document.querySelectorAll(".filtro-tipo").forEach(btn => {
     });
 });
 
-// selects
-document.getElementById("filtro-genero").addEventListener("change", filtrar);
+document.getElementById("filtro-marca").addEventListener("change", filtrar);
 document.getElementById("filtro-preco").addEventListener("change", filtrar);
-
-// lê parâmetro da URL
-const params = new URLSearchParams(window.location.search);
-const generoURL = params.get("genero");
-const filtroURL = params.get("filtro");
-
-if (generoURL) {
-    document.getElementById("filtro-genero").value = generoURL;
-}
-if (filtroURL) {
-    document.getElementById("filtro-preco").value = filtroURL;
-}
 
 // hamburguer
 const hamburguer = document.getElementById("hamburguer");
@@ -119,12 +106,6 @@ hamburguer.addEventListener("click", () => {
     hamburguer.classList.toggle("aberto");
 });
 
-// badge importado no CSS
-const style = document.createElement("style");
-style.textContent = `.badge-importado { background: #1a3a5a; color: #fff; }`;
-document.head.appendChild(style);
-
-// renders
 renderGrid(produtos);
 filtrar();
 renderTabela();

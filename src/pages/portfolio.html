@@ -1,1 +1,172 @@
-<!--portfolio.html-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/portfolio.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./src/assets/favicon.ico" type="image/x-icon">
+    <title>Portfólio | Killswitch</title>
+</head>
+
+<body>
+
+    <!--Início: Menu-->
+    <header>
+        <a href="index.html"><img id="img-menu" src="../assets/logo-killswitch.png" alt="Logo Killswitch"></a>
+
+        <nav id="link-menu">
+            <ul>
+                <li><a href="/killswitch-loja-gamer/index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <a id="botao-menu" href="./portfolio.html">Portfólio</a>
+
+        <button id="hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+    <!-- Fim: Menu -->
+
+    <main>
+
+        <!-- Início: Hero portfolio -->
+        <section id="portfolio-hero">
+            <div id="portfolio-hero-container">
+                <h1 id="portfolio-titulo">Nosso <span>Portifólio</span></h1>
+                <p id="portfolio-sub">Filtre por categoria, faixa de preço e encontre o setup ideal</p>
+            </div>
+        </section>
+        <!-- Fim: Hero portfolio -->
+
+        <!-- Início: Filtros -->
+        <section id="portfolio-filtros">
+            <div id="filtros-container">
+
+                <div id="filtros-esquerda">
+                    <button class="filtro-tipo ativo" data-tipo="todos">Todos</button>
+                    <button class="filtro-tipo" data-tipo="jogo">Jogo</button>
+                    <button class="filtro-tipo" data-tipo="periferico">Periférico</button>
+                    <button class="filtro-tipo" data-tipo="hardware">Hardware</button>
+                    <button class="filtro-tipo" data-tipo="acessorio">Acessório</button>
+                </div>
+
+                <div id="filtros-direita">
+                    <select id="filtro-marca">
+                        <option value="todos">Marca</option>
+                        <option value="HyperX">HyperX</option>
+                        <option value="AMD">AMD</option>
+                        <option value="Kingston">Kingston</option>
+                        <option value="Redragon">Redragon</option>
+                        <option value="Fifine">Fifine</option>
+                        <option value="Streamplify">Streamplify</option>
+                        <option value="Xbox 360">Xbox 360</option>
+                        <option value="Xbox One">Xbox One</option>
+                        <option value="PS4">PS4</option>
+                    </select>
+                    <select id="filtro-preco">
+                        <option value="todos">Filtro</option>
+                        <option value="promocao">Promoção</option>
+                    </select>
+                </div>
+
+            </div>
+        </section>
+        <!-- Fim: Filtros -->
+
+        <!-- Início: Grid produtos -->
+        <section id="portfolio-grid-section">
+            <div id="portfolio-grid" class="produtos-grid">
+                <!-- cards gerados pelo JS -->
+            </div>
+        </section>
+        <!-- Fim: Grid produtos -->
+
+        <!-- Início: Tabela de promoções -->
+        <section id="tabela-section">
+            <div id="tabela-container">
+                <h2 id="tabela-titulo">Tabela de promoções</h2>
+                <div id="tabela-wrapper">
+                    <table id="tabela-promo">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Marca</th>
+                                <th>Categoria</th>
+                                <th>Preço original</th>
+                                <th>Promoção</th>
+                                <th>Desconto</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- Fim: Tabela de promoções -->
+
+    </main>
+
+    <!-- Início: Footer -->
+    <footer id="footer">
+        <div id="footer-container">
+
+            <div class="footer-col" id="footer-marca">
+                <a href="/killswitch-loja-gamer/index.html">
+                    <img id="footer-logo" src="../assets/logo-killswitch.png" alt="Logo Killswitch">
+                </a>
+                <p id="footer-desc">A loja gamer de quem leva o jogo a sério. Periféricos, hardware e acessórios com
+                    qualidade de campeonato desde 2019.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-titulo">Links Rápidos</h4>
+                <ul class="footer-lista">
+                    <li><a href="/killswitch-loja-gamer/index.html">Home</a></li>
+                    <li><a href="./portfolio.html">Portfólio</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-titulo">Contato</h4>
+                <ul class="footer-lista footer-contato">
+                    <li>(11) 9 9999-8888</li>
+                    <li>contato@killswitch.com.br</li>
+                    <li>São Paulo — SP</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-titulo">Redes Sociais</h4>
+                <div id="footer-social">
+                    <a href="#" class="social-btn">Instagram</a>
+                    <a href="#" class="social-btn">Facebook</a>
+                    <a href="./portfolio.html" class="social-btn">Portfólio</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="footer-bottom">
+            <p>© 2026 Killswitch. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- Fim: Footer -->
+
+    <script src="../js/portfolio.js"></script>
+</body>
+
+</html>
